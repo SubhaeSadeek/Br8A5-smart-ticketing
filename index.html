@@ -6,10 +6,76 @@
     <title>Smart Ticket Solution</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
-    <header>
-        
+<body class="w-[1440px] raleway-font font-extrabold">
+    <header class="">
+        <!-- navbar -->
+        <div class="navbar  bg-pink-800 w-[81%] mx-auto my-5 rounded-xl">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                  <li><a>Home</a></li>
+                  <li><a>About</a></li>
+                  <li><a>Destination</a></li>
+                  <li><a>Search</a></li>
+                </ul>
+              </div>
+              <a class="text-2xl">Ticket Paradise</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Destination</a></li>
+                <li><a>Search</a></li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+              <a class="btn text-green-500 bg-green-100 text-lg border-green-500">Bus <img src="images/bus-icon.png" alt=""></a>
+            </div>
+          </div>
+          <!-- Banner -->
+          <div class="hero h-[30rem] w-[81%] mx-auto bg-[url('./images/banner.png')] rounded-2xl">
+            <div class="hero-overlay bg-opacity-20 rounded-2xl"></div>
+            <div class="hero-content text-center">
+              <div class="max-w-md">
+                <h1 class="text-5xl font-bold text-white w-[120%]">End-to-End Travel with <br><span class="text-green-500">Ticket Paradise</span></h1>
+                <p class="py-6 text-white font-medium">Yes, you are in the right place. Get your journey to a new height. We have been leading the industry for online tikcet booking system in the world</p>
+                <button class="btn btn-primary bg-green-500 text-black border-none">Buy Ticket</button>
+              </div>
+            </div>
+          </div>
+        <!-- cards on banner -->
+        <div class="container mx-auto flex justify-center gap-4 mt-[-5rem] inter-fonts">
+          <!-- users card -->
+          <div class="flex items-center justify-center gap-3 h-36 w-80 border-b-4 border-green-500 rounded-2xl bg-white">
+            <div><img src="images/people.png" alt=""></div>
+            <div>
+              <h3 class="font-bold text-4xl mb-3">500K+</h3>
+              <p class="font-normal text-xl text[#03071280]">Registered Users</p>
+            </div>
+          </div>
+          <!-- tickets card -->
+          <div class="flex items-center justify-center gap-3 h-36 w-80 border-b-4 border-green-500 rounded-2xl bg-white">
+            <div><img src="images/ticket-cupon.png" alt=""></div>
+            <div>
+              <h3 class="font-bold text-4xl mb-3">1.7 lacks</h3>
+              <p class="font-normal text-xl text[#03071280]">Tickets Sold</p>
+            </div>
+          </div>
+          <!-- rental cards -->
+          <div class="flex items-center justify-center gap-3 h-36 w-80 border-b-4 border-green-500 rounded-2xl bg-white">
+            <div><img src="images/stoppage.png" alt=""></div>
+            <div>
+              <h3 class="font-bold text-4xl mb-3">80K+</h3>
+              <p class="font-normal text-xl text[#03071280]">Rental Partners</p>
+            </div>
+          </div>
+        </div>
     </header>
 
     <main>
