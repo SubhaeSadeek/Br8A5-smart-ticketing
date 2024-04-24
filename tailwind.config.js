@@ -4,3 +4,4 @@ module.exports = {
       themes: ["light", "dark", "cupcake"],
     },
   }
+  

@@ -7,17 +7,30 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles/style.css">
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      mygray40: "rgba(3,7,18,0.40)",
+                      mygray50: "rgba(3,7,18,0.50)",
+                      mygray60: "rgba(3,7,18,0.60)"
+                  }
+              }
+          }
+      }
+  </script>
 </head>
 <body class="w-[1440px] raleway-font font-extrabold">
     <header class="">
         <!-- navbar -->
-        <div class="navbar  bg-pink-800 w-[81%] mx-auto my-5 rounded-xl">
+        <div class="navbar  bg-base-100 w-[81%] mx-auto my-5 rounded-xl">
             <div class="navbar-start">
               <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                 </div>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-medium text-lg">
                   <li><a>Home</a></li>
                   <li><a>About</a></li>
                   <li><a>Destination</a></li>
@@ -27,7 +40,7 @@
               <a class="text-2xl">Ticket Paradise</a>
             </div>
             <div class="navbar-center hidden lg:flex">
-              <ul class="menu menu-horizontal px-1">
+              <ul class="menu menu-horizontal px-1 font-medium text-lg">
                 <li><a>Home</a></li>
                 <li><a>About</a></li>
                 <li><a>Destination</a></li>
@@ -118,10 +131,191 @@
           <button class="btn btn-outline w-[190px] h-[70px] px-8 py-5 font-bold text-[#1DD100] border-2 border-[#1DD100]">See All Offers</button>
         </div>
       </section>
+      <!-- ticket booiking section with seating arrangement -->
+      <section class="bg-[#F7F8F8] rounded-t-[88px] border-t-2 border-[#1DD100] mt-32">
+        <!-- at a glance status of bus ticket -->
+        <!-- intro of bus status -->
+        <div class="container w-[50%] mx-auto">
+          <h3 class="mx-auto mt-20 text-center font-bold text-4xl ">Ticket Paradise</h3>
+          <p class="inter-fonts font-normal text-center mt-6">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+        </div>
+        <!-- card showing bus ticket status at a glance -->
+        <div class=" flex justify-between w-[81%] h-[418px] border-none bg-white mx-auto rounded-2xl mt-12 ">
+          <!-- paribahan title with available ticket section -->
+          <div class="absolute w-[65%]">
+          <div class="flex justify-between items-center  gap-4 pt-4">
+             <div class="flex gap-5">
+              <img src="./images/bus-logo.png" alt="">
+                <div>
+                  <h3 class="font-bold text-4xl">Greenline Paribahan</h3>
+                <p class="inter-fonts font-normal  text-[#03071299] mt-4  text-lg">Coach-009-WEB ! AC_Business</p>
+                </div>
+              </div>
+              <button class="btn text-green-500 bg-green-100 text-lg border-green-500 border-none"><img src="images/seat-green.png" alt="">40 Seats Left</button>
+            </div>
+              <!-- itenary card -->
+            <div class="absolute w-full mt-10 ml-3 bg-[#F7F8F8] rounded-3xl">
+              <div class="flex justify-between border-b-2 border-dashed p-5">
+                <p>Route</p>
+                <p>Dhaka - Sylhet</p>
+              </div>
+              <div class="flex justify-between border-b-2 border-dashed p-5">
+                <p>Departure Time</p>
+                <p>9.00 PM</p>
+              </div>
+              <div class="flex justify-between p-5">
+              <div class="bg-[#0307120D] w-[w-230px] h-[55px] rounded-xl p-4 ">Boarding Point - Noakali</div>
+              <div class="bg-[#0307120D] w-[w-230px] h-[55px] rounded-xl p-4 ">Dropping Point - Maijdi</div>
+              <div class="bg-[#0307120D] w-[w-230px] h-[55px] rounded-xl p-4 ">Est. Time - 3 Hour</div>
+              </div>
+            </div>
+            </div>
+            
+          <img src="./images/info-devider.png" alt="" class="relative left-3/4">
+          <!-- ticket price display -->
+          <div class="w-1/6 h-1/4 relative top-44  right-10">
+            <img src="./images/fare.png" alt="" class="mx-auto">
+            <h3 class="text-center font-bold text-3xl">550 Taka</h3>
+            <p class="text-center font-semibold text-2xl text-[#03071299]">Per Seat</p>
+          </div>
+        </div>
+        <!-- seat booking section -->
+        <section class="flex w-[81%] mx-auto mt-12 bg-white rounded-3xl">
+          <!-- ----    ----    ----    ----    ---- -->
+        <!-- seating arrangemnt display section -->
+        <div class="w-[58%] m-8">
+           <!-- seating arrangement ##1 -->
+           
+            <h3 class="font-semibold text-2xl border-b-2 border-dashed py-7">Select Your Seat</h3>
+            <div  class="flex justify-between inter-fonts border-b-2 border-dashed py-3">
+              <button class="btn btn-ghost font-medium text-lg text-mygray50">
+                <img src="./images/seat-gray.png" alt="">Available
+              </button>
+              <button class="btn btn-ghost font-semibold text-lg text-green-500">
+                  <img src="./images/seat-green-filled.png" alt="">Selected
+              </button>
+            </div>
+            <!-- steering displaying -->
+            <div  class="flex justify-between inter-fonts py-3 mt-8">
+              <button class="btn btn-ghost">
+                </button>
+              <button class="btn w-28 rounded-xl bg-[#0307121a]">
+                  <img src="./images/steering-wheel.png" alt="">
+              </button>
+            </div>
+            <!-- seating arrangemnt ##2 -->
+            <div class="inter-fonts text-mygray50 font-medium text-lg">
+              <div id="a" class="flex justify-between items-center mb-7">
+                <p>A</p>
+                <kbd id="a1" class="kbd kbd-lg w-28 h-14 border-none">A1</kbd>
+                <kbd id="a2" class="kbd kbd-lg w-28 h-14 border-none">A2</kbd>
+                <kbd id="a3" class="kbd kbd-lg w-28 h-14 border-none">A3</kbd>
+                <kbd id="a4" class="kbd kbd-lg w-28 h-14 border-none">A4</kbd>
+              </div>
+              <div id="b" class="flex justify-between items-center mb-7">
+                <p>B</p>
+                <kbd id="c1" class="kbd kbd-lg w-28 h-14 border-none">B1</kbd>
+                <kbd id="c2" class="kbd kbd-lg w-28 h-14 border-none">B2</kbd>
+                <kbd id="c3" class="kbd kbd-lg w-28 h-14 border-none">B3</kbd>
+                <kbd id="c4" class="kbd kbd-lg w-28 h-14 border-none">B4</kbd>
+              </div>
+              <div id="c" class="flex justify-between items-center mb-7">
+                <p>C</p>
+                <kbd id="c1" class="kbd kbd-lg w-28 h-14 border-none">C1</kbd>
+                <kbd id="c2" class="kbd kbd-lg w-28 h-14 border-none">C2</kbd>
+                <kbd id="c3" class="kbd kbd-lg w-28 h-14 border-none">C3</kbd>
+                <kbd id="c4" class="kbd kbd-lg w-28 h-14 border-none">C4</kbd>
+              </div>
+              <div id="d" class="flex justify-between items-center mb-7">
+                <p>D</p>
+                <kbd id="d1" class="kbd kbd-lg w-28 h-14 border-none">D1</kbd>
+                <kbd id="d2" class="kbd kbd-lg w-28 h-14 border-none">D2</kbd>
+                <kbd id="d3" class="kbd kbd-lg w-28 h-14 border-none">D3</kbd>
+                <kbd id="d4" class="kbd kbd-lg w-28 h-14 border-none">D4</kbd>
+              </div>
+              <div id="e" class="flex justify-between items-center mb-7">
+                <p>E</p>
+                <kbd id="e1" class="kbd kbd-lg w-28 h-14 border-none">E1</kbd>
+                <kbd id="e2" class="kbd kbd-lg w-28 h-14 border-none">E2</kbd>
+                <kbd id="e3" class="kbd kbd-lg w-28 h-14 border-none">E3</kbd>
+                <kbd id="e4" class="kbd kbd-lg w-28 h-14 border-none">E4</kbd>
+              </div>
+              <div id="f" class="flex justify-between items-center mb-7">
+                <p>F</p>
+                <kbd id="f1" class="kbd kbd-lg w-28 h-14 border-none">F1</kbd>
+                <kbd id="f2" class="kbd kbd-lg w-28 h-14 border-none">F2</kbd>
+                <kbd id="f3" class="kbd kbd-lg w-28 h-14 border-none">F3</kbd>
+                <kbd id="f4" class="kbd kbd-lg w-28 h-14 border-none">F4</kbd>
+              </div>
+              <div id="g" class="flex justify-between items-center mb-7">
+                <p>G</p>
+                <kbd id="g1" class="kbd kbd-lg w-28 h-14 border-none">G1</kbd>
+                <kbd id="g2" class="kbd kbd-lg w-28 h-14 border-none">G2</kbd>
+                <kbd id="g3" class="kbd kbd-lg w-28 h-14 border-none">G3</kbd>
+                <kbd id="g4" class="kbd kbd-lg w-28 h-14 border-none">G4</kbd>
+              </div>
+              <div id="h" class="flex justify-between items-center mb-7">
+                <p>H</p>
+                <kbd id="h1" class="kbd kbd-lg w-28 h-14 border-none">H1</kbd>
+                <kbd id="h2" class="kbd kbd-lg w-28 h-14 border-none">H2</kbd>
+                <kbd id="h3" class="kbd kbd-lg w-28 h-14 border-none">H3</kbd>
+                <kbd id="h4" class="kbd kbd-lg w-28 h-14 border-none">H4</kbd>
+              </div>
+              <div id="i" class="flex justify-between items-center mb-7">
+                <p>I</p>
+                <kbd id="i1" class="kbd kbd-lg w-28 h-14 border-none">I1</kbd>
+                <kbd id="i2" class="kbd kbd-lg w-28 h-14 border-none">I2</kbd>
+                <kbd id="i3" class="kbd kbd-lg w-28 h-14 border-none">I3</kbd>
+                <kbd id="i4" class="kbd kbd-lg w-28 h-14 border-none">I4</kbd>
+              </div>
+              <div id="j" class="flex justify-between items-center">
+                <p>J</p>
+                <kbd id="j1" class="kbd kbd-lg w-28 h-14 border-none">J1</kbd>
+                <kbd id="j2" class="kbd kbd-lg w-28 h-14 border-none">J2</kbd>
+                <kbd id="j3" class="kbd kbd-lg w-28 h-14 border-none">J3</kbd>
+                <kbd id="j4" class="kbd kbd-lg w-28 h-14 border-none">J4</kbd>
+              </div>
+            </div>
+          </div>
+        <!-- ----    ----    ----    ----    ----    ---- -->
+        <!-- Seats captured and total cost display section -->
+      <div class="w-[42%] m-8">
+        <h3 class="font-semibold text-2xl border-b-2 border-dashed py-7">Select Your Seat</h3>
+        <!-- total seat and price calculation display section -->
+        <section class="inter-fonts bg-[#F7F8F8] rounded-xl">
+          <!-- field head -->
+          <div class="flex justify-between m-6 pb-4 border-b-2 border-dashed">
+            <button class="font-medium text-base">Seat<div id="seat-total-selected" class="badge bg-green-500 text-white">0</div></button>
+            <p class="font-medium text-base">Class</p>
+            <p class="font-medium text-base">Price</p>
+          </div>
+          <!-- fields  -->
+          <div class="flex justify-between mx-6 pb-4 border-b-2 border-mygray40 font-normal text-mygray60 text-base">
+            <p>C2</p>
+            <p>Economy</p>
+            <p>550</p>
+          </div>
+          <div class="flex justify-between mx-6 font-medium text-base">
+            <p>Total Price</p>
+            <P>BDT <span>0</span></P>
+          </div>
+          <label class="input input-bordered flex items-center gap-2 mx-6 my-6 py-7">
+            <input type="text" class="grow text-mygray40 font-normal w-32" placeholder="Have any copupon?" />
+            <button class="btn btn-primary bg-green-500 text-white text-base font-semibold border-none w-20 h-5 my-6">Apply</button>
+          </label>
+          <div class="flex justify-between mx-6 pb-6 font-medium text-base">
+            <p>Grand Total</p>
+            <p>BDT <span>0</span></p>
+          </div>
+        </section>
+        
+      </div> 
+      </section>
+      </section>
     </main>
 
     <footer>
-
+ <div class="h-56 bg-slate-700"></div>
     </footer>
 </body>
 </html>
