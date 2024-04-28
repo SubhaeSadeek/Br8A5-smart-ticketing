@@ -310,7 +310,7 @@
           </label>
           <div class="flex justify-between mx-6 pb-6 font-medium text-base">
             <p>Grand Total</p>
-            <p>BDT <span id="grand-total-price">0</span></p>
+            <p>BDT <span id="grand-total-price" class="font-bold">0</span></p>
           </div>
         </section>
         <!-- customer info section -->
@@ -327,16 +327,33 @@
             <div class="label">
               <span class="label-text font-semibold text-base">Phone Number*</span>
             </div>
-            <input type="text" placeholder="Enter Your Phone Number" class="input input-bordered w-full text-mygray40 font-normal" />
+            <input id="input-phone-number" type="number" placeholder="Enter Your Phone Number" class="input input-bordered w-full text-mygray40 font-normal" />
           </label>
           <!-- Passanger email ID -->
           <label class="form-control w-full">
             <div class="label">
               <span class="label-text font-semibold text-base">Email ID*</span>
             </div>
-            <input type="text" placeholder="Enter Your email ID" class="input input-bordered w-full text-mygray40 font-normal" />
+            <input type="email" placeholder="Enter Your email ID" class="input input-bordered w-full text-mygray40 font-normal" />
           </label>
-          <button class="btn btn-primary bg-green-500 text-white font-extrabold text-xl mx-auto mt-4 border-none w-full">Next</button>
+          <button id="btn-next" class="btn btn-primary  bg-green-500 text-white font-extrabold text-xl mx-auto mt-4 border-none w-full" onclick="my_modal_1.showModal()" disabled>Next</button>
+          
+          <!-- Modal section -->
+          <dialog id="my_modal_1" class="modal ">
+            <div class="modal-box roboto-fonts" style="max-width:720px;">
+              <img src="./images/success.png" class="mx-auto">
+              <h3 class="font-bold text-2xl text-green-600 text-center">SUCCESS</h3>
+              <p class="font-medium text-xl pt-4 text-center">Thank you for Booking Our Bus Seats.</p>
+              <p class="roboto-fonts font-medium text-xl text-center">We are working hard to find the best service and deals for you.</p>
+              <p class="font-light  text-xl text-center py-2">Shortly you will find a confirmation in your email.</p>
+              <div class="modal-action flex-1 justify-center">
+                <form method="dialog">
+                  <button id="btn-continue" class="w-[300px] h-[56px] bg-green-600 text-white text-xl font-semibold rounded-[32px] mb-10">Continue</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+
           <div class="flex justify-between font-normal text-base text-mygray40 mt-5">
             <a href=""><p><u>Terms and Conditions</u></p></a>
             <a href=""><p><u>Cancellation Policy</u></p></a>
@@ -344,7 +361,7 @@
         </section>
       </div> 
       </section>
-      </section>
+    </section>
     </main>
 
     <footer class="h-[450px] bg-[#030712]">

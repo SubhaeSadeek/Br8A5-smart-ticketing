@@ -10,6 +10,7 @@ function discountTitle(percentageDiscount){
    div.appendChild(textTitle);
    // discount text amount 
    const amountDiscounted = document.createElement('p');
+   amountDiscounted.classList.add('text-green-600')
    amountDiscounted.innerText = 'BDT ' + totalCost*percentageDiscount/100;
    div.appendChild(amountDiscounted);
   
@@ -23,5 +24,6 @@ function inputAreaHidden(){
 function discountedGrandTotal(percentageDiscount){
    const discountedGrandAmount = totalCost- totalCost*percentageDiscount/100;
    const grandTotalElement = document.getElementById('grand-total-price');
+   grandTotalElement.classList.add('border-b-2', 'border-green-600');
    grandTotalElement.innerText = discountedGrandAmount; 
 }

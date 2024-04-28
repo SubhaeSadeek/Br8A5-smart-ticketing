@@ -98,7 +98,26 @@ for(let i = 0; i < seatMaps.length; i++) {
 
 // next button functionality
 
+const phoneNumber = document.getElementById('input-phone-number');
+phoneNumber.addEventListener('keyup', function(){
+  if (totalSeat === 0) {
+    alert('Select seats first!');
+    phoneNumber.value = '';
+}
 
+  const phoneNumValue = phoneNumber.value;
+  const phoneNumValueLength = phoneNumValue.length;
+  
+  if((totalSeat > 0) && (phoneNumValueLength > 0)){
+    const btnNext = document.getElementById('btn-next');
+    btnNext.removeAttribute('disabled')
+  }
+})
+// continue button funtion
+const btnContinue = document.getElementById('btn-continue');
+btnContinue.addEventListener('click', function(){
+  location.reload();
+})
 
 
 
